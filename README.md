@@ -1,23 +1,20 @@
-# Agent Registry
+# Agent Artifacts
 
-A registry of reusable AI agent skills and rules for development workflows.
+A registry of reusable AI agent artifacts: skills, rules, and workflows — for development workflows. The catalog grows over time as new artifacts are added.
 
-## Skills
+## Just Module
 
-Skills extend AI assistants with specialized capabilities.
+The repo provides a `module.just` that can be integrated into an existing justfile. Pull it once and import it:
 
-| Name | Description |
-|------|-------------|
-| **gitmoji-conventional-commits** | Format commit messages with Conventional Commits and gitmoji |
-| **gitmoji-conventional-pull-requests** | Format Pull Request titles with Conventional Commits and gitmoji |
-| **keep-a-changelog** | Maintain CHANGELOG.md in Keep a Changelog format |
+```just
+import? ".just/imports/areg.just"
 
-## Rules
+# ...
 
-Rules provide project-specific guidance for AI agents:
+fetch-dependencies:
+    mkdir -p ".just/imports"
+    curl -sL https://raw.githubusercontent.com/morzecrew/agent-registry/main/module.just -o ".just/imports/areg.just"
+```
 
-| Name | Description |
-|------|-------------|
-| **pytest-style** | Pytest conventions for test layout, naming, and unit/integration testing |
-| **repo-state-changes** | Require confirmation for high-risk git operations (force push, protected branches, tags, etc.) |
+The module exposes recipe `pull-agent-artifacts` to fetch skills, rules, or workflows from this registry (or any compatible repo) into your project.
 

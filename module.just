@@ -13,7 +13,7 @@ _awk_check := require("awk")
 [arg("type", long, help="Type of artifact to pull", pattern="skill|rule|workflow")]
 [arg("target", long, help="Explicit target dir or ''")]
 [arg("force", long, value="true", help="Force overwrite artifacts in the target directory")]
-pull-agent-artifacts repo="morzecrew/agent-registry" ref="main" type="skill" path="skills/*" agent="cursor" target="" force="false":
+pull-agent-artifacts repo="morzecrew/agent-artifacts" ref="main" type="skill" path="skills/*" agent="cursor" target="" force="false":
     #!/usr/bin/env bash
 
     tmp_dir=$(mktemp -d)
