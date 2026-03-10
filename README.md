@@ -8,9 +8,9 @@ Skills extend AI assistants with specialized capabilities.
 
 | Name | Description |
 |------|-------------|
-| **git-commits** | Format commit messages with Conventional Commits and gitmoji |
-| **git-pr-titles** | Format Pull Request titles with Conventional Commits and gitmoji |
-| **changelog-release-assistant** | Maintain CHANGELOG.md in Keep a Changelog format and prepare tag-based releases |
+| **gitmoji-conventional-commits** | Format commit messages with Conventional Commits and gitmoji |
+| **gitmoji-conventional-pull-requests** | Format Pull Request titles with Conventional Commits and gitmoji |
+| **keep-a-changelog** | Maintain CHANGELOG.md in Keep a Changelog format |
 
 ## Rules
 
